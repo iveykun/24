@@ -6,47 +6,47 @@ Four cards, named a, b, c, d
 
 There are 32 possibilities in total:
 
-abcd
-abdc
-acbd
-adbc
-acdb
-adcb
+abcd/
+abdc/
+acbd/
+adbc/
+acdb/
+adcb/
 
-bacd
-badc
-bcad
-bcda
-bdca
-bdac
+bacd/
+badc/
+bcad/
+bcda/
+bdca/
+bdac/
 
-cabd
-cadb
-cbad
-cbda
-cdba
-cdab
+cabd/
+cadb/
+cbad/
+cbda/
+cdba/
+cdab/
 
-dabc
-dacb
-dbac
-dbca
-dcab
-dcba
+dabc/
+dacb/
+dbac/
+dbca/
+dcab/
+dcba/
 
 And we can see that there are actually just 12 variations that make up that long list:
 
-ab, ac, ad
-ba, bc, bd
-ca, cb, cd
-da, db, dc
+ab, ac, ad/
+ba, bc, bd/
+ca, cb, cd/
+da, db, dc/
 
 I think it is possible to calculate every solution using pairs (a,b) and (c,d) to make sums, differences and products.
 
 for example, a common technique is to find (4,6). The program would then run through the 32 possibilities to find sums and products that will result in a 6 or a 4.
 
 Example: 
-23 59
+2359
 
 (2x3)(9-5) = 6x4 = 24
 
