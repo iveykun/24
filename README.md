@@ -41,6 +41,9 @@ ba, bc, bd/
 ca, cb, cd/
 da, db, dc/
 
+Which in turns makes it easier to just repeat the pattern twice to get the 32 possibilities
+...
+(might be possible to engineer a system that 'retires' a couple from the center and join the extremeties, in a (b,c)(a,d) fashion)
 I think it is possible to calculate every solution using pairs (a,b) and (c,d) to make sums, differences and products.
 
 for example, a common technique is to find (4,6). The program would then run through the 32 possibilities to find sums and products that will result in a 6 or a 4.
