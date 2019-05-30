@@ -6,33 +6,40 @@ Four cards, named a, b, c, d
 
 There are 32 possibilities in total:
 
-ab cd
-ab dc
-ac bd
-ad bc
-ac db
-ad cb
+abcd
+abdc
+acbd
+adbc
+acdb
+adcb
 
-ba cd
-ba dc
-bc ad
-bc da
-bd ca
-bd ac
+bacd
+badc
+bcad
+bcda
+bdca
+bdac
 
-ca bd
-ca db
-cb ad
-cb da
-cd ba
-cd ab
+cabd
+cadb
+cbad
+cbda
+cdba
+cdab
 
-da bc
-da cb
-db ac
-db ca
-dc ab
-dc ba
+dabc
+dacb
+dbac
+dbca
+dcab
+dcba
+
+And we can see that there are actually just 12 variations that make up that long list:
+
+ab, ac, ad
+ba, bc, bd
+ca, cb, cd
+da, db, dc
 
 I think it is possible to calculate every solution using pairs (a,b) and (c,d) to make sums, differences and products.
 
@@ -44,3 +51,10 @@ Example:
 (2x3)(9-5) = 6x4 = 24
 
 In this case the case is (axb)x(d-c), with original structure of ab dc
+
+There are, of course, also solutions requiring triplets, such as 3252
+
+The solution is:
+3x((5x2)-2) = 3x(10-2) = 3x8 = 24
+
+But the algorithm might be able to figure it out by aiming at making all 32 combinations and replacing the operations between a,b,c and d
