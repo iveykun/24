@@ -16,10 +16,10 @@ def all_pairs(lst):
 	for p in itertools.permutations(lst):
 		i = iter(p)
 		zipped = (zip(i, i))
-		all = list(zipped)
-		flattened = (flatten(all))
+		all = list(zipped)  # creates nested list
+		flattened = (flatten(all))  #  makes the list one dimensional
 		results = list(map(int, flattened))
-		a = (results)[0]
+		a = (results)[0]  # takes the first "card" of the list
 		b = (results)[1]
 		c = (results)[2]
 		d = (results)[3]
