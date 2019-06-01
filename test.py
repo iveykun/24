@@ -5,7 +5,7 @@ B = input("card 2; ")
 C = input("card 3; ")
 D = input("card 4; ")
 
-def checker(a, b, c, d):
+def checker(a, b, c, d):  # needs work
 	if a
 
 
@@ -23,6 +23,6 @@ def all_pairs(lst):
 		b = (results)[1]
 		c = (results)[2]
 		d = (results)[3]
-
+		#  print(results) will give you all possible combinations. You only need to change the operand between a, b, c and d.
 
 all_pairs([A, B, C, D])
