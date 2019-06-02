@@ -67,3 +67,7 @@ The way I did it was to use a dictionary with operands. The process is then roug
 add(add(a, b), add(c, d)) for a+b+c+d
 
 Then, usign some counters, I can swap the operands for anything I want until it finds 2-3 that gives 24.
+
+
+EDIT:
+Wihtout parantheses.py is a working version of the program, though it will display the answer without proper formatting. For example, inputting 7654 will yield 5+7x6-4, but what it means is actually (5+7)x(6-4)
