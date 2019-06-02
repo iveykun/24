@@ -61,3 +61,9 @@ The solution is:
 3x((5x2)-2) = 3x(10-2) = 3x8 = 24
 
 But the algorithm might be able to figure it out by aiming at making all 32 combinations and replacing the operations between a,b,c and d
+
+The way I did it was to use a dictionary with operands. The process is then roughly :
+
+add(add(a, b), add(c, d)) for a+b+c+d
+
+Then, usign some counters, I can swap the operands for anything I want until it finds 2-3 that gives 24.
