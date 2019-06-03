@@ -4,56 +4,22 @@ a python program to calculate answers to the 24 card game
 For now, I have this set up:
 Four cards, named a, b, c, d
 
-There are 32 possibilities in total:
+This program has two ways (named result1 and result2) to calculate 24:
+result 1 attempts (ab)(cd) and adds operands between the letters
+result 2 attempts (((ab)c)d) and also adds operands
 
-abcd/
-abdc/
-acbd/
-adbc/
-acdb/
-adcb/
+In theory, these two ways should be able to calculate all possible 24 combinations, but it might take a very long time. 
 
-bacd/
-badc/
-bcad/
-bcda/
-bdca/
-bdac/
+I would like for my program to be able to simultaneously calculate 4 different results
 
-cabd/
-cadb/
-cbad/
-cbda/
-cdba/
-cdab/
-
-dabc/
-dacb/
-dbac/
-dbca/
-dcab/
-dcba/
-
-And we can see that there are actually just 12 variations that make up that long list:
-
-ab, ac, ad/
-ba, bc, bd/
-ca, cb, cd/
-da, db, dc/
-
-Which in turns makes it easier to just repeat the pattern twice to get the 32 possibilities
-...
-(might be possible to engineer a system that 'retires' a couple from the center and join the extremeties, in a (b,c)(a,d) fashion)
-I think it is possible to calculate every solution using pairs (a,b) and (c,d) to make sums, differences and products.
-
-for example, a common technique is to find (4,6). The program would then run through the 32 possibilities to find sums and products that will result in a 6 or a 4.
-
-Example: 
+Example: (normal)
 2359
 
 (2x3)(9-5) = 6x4 = 24
 
 In this case the case is (axb)x(d-c), with original structure of ab dc
+
+My ideal program will calculate first 2359, then 3592, 5923, 9235 and add operands between them simultaneously, because sometimes a certain order of number just don't work.
 
 There are, of course, also solutions requiring triplets, such as 3252
 
@@ -64,10 +30,6 @@ But the algorithm might be able to figure it out by aiming at making all 32 comb
 
 The way I did it was to use a dictionary with operands. The process is then roughly :
 
-add(add(a, b), add(c, d)) for a+b+c+d
+sum(sum(a, b), sum(c, d)) for (a+b)+(c+d)
 
-Then, usign some counters, I can swap the operands for anything I want until it finds 2-3 that gives 24.
-
-
-EDIT:
-Wihtout parantheses.py is a working version of the program, though it will display the answer without proper formatting. For example, inputting 7654 will yield 5+7x6-4, but what it means is actually (5+7)x(6-4)
+Then, usign some counters, I can swap the operands for anything I want until it finds 1 that gives 24.
