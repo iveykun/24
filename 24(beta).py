@@ -18,10 +18,12 @@ def checker(a, b, c, d):
 	op = ["+", "-", "*", "/", "^"]
 	for i in itertools.product([0, 1, 2, 3, 4], repeat=3):
 
-		m = i[0] 
-		n = i[1] 
+		m = i[0]
+		n = i[1]
 		o = i[2]
-		op_char1 = op[m], op_char2 = op[n], op_char3 = op[o]
+		op_char1 = op[m]
+		op_char2 = op[n]
+		op_char3 = op[o]
 
 		try:
 			result1 = ops[op_char2]((ops[op_char1](a, b)), (ops[op_char3](c, d)))  # a +1 b +2 c +3 d
